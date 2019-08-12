@@ -1,0 +1,6 @@
+<input type="text" placeholder="Name" (keyup.enter)="addComment()" [(ngModel)]="name">
+<input type="text" placeholder="Message" (keyup.enter)="addComment()" [(ngModel)]="message">
+<button (click)="addComment()">Add comment</button>
+
+
+<app-comment *ngFor="let comment of comments" [commentItem]="comment"></app-comment>
